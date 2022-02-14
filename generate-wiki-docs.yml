@@ -1,19 +1,17 @@
-# Generate Release Notes (Crossplatform)
-# Description - Generates a release notes file in a format of your choice from the build or release history
-- task: XplatGenerateReleaseNotes@3
-  inputs: 
-     # Required arguments
-     outputfile: 
-     templateLocation: File
-     templatefile: 
-     inlinetemplate: 
-     dumpPayloadToConsole: false
-     dumpPayloadToFile: false
-     replaceFile: True
-     appendToFile: True
-     getParentsAndChildren: False
-     getAllParents: False
-     getIndirectPullRequests: False
-     stopOnError: False
-     considerPartiallySuccessfulReleases: False
-     checkForManuallyLinkedWI: False
+parameters:
+- name: workingDirectory    
+  type: string
+- name: wikiFilename           
+  type: string
+- name: repo                   
+  type: string
+- name: GitName                   
+  type: string
+- name: GitEmail                   
+  type: string
+- name: GitHubPat                   
+  type: string
+- name: UserName              
+  type: string
+
+
